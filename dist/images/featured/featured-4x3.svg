@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <pattern id="feat-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.8" fill="#000000" opacity="0.4"/>
+    </pattern>
+    <linearGradient id="feat-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="50%" stop-color="#2a0808"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#feat-grad)"/>
+  <rect width="1200" height="900" fill="url(#feat-dots)"/>
+
+  <!-- Bold Grid Frame -->
+  <rect x="24" y="24" width="1152" height="852" fill="none" stroke="#d62828" stroke-width="4"/>
+  <rect x="36" y="36" width="1128" height="828" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="12,8"/>
+
+  <!-- Center Graphic Display -->
+  <g transform="translate(600, 420)">
+    <rect x="-350" y="-220" width="700" height="440" fill="#d62828" rx="8" stroke="#ffffff" stroke-width="3"/>
+    <circle r="160" fill="#000000" opacity="0.9"/>
+    <polygon points="0,-130 110,80 -110,80" fill="#ffcc00"/>
+    <text x="0" y="20" font-family="'Syne', sans-serif" font-size="56" font-weight="900" fill="#ffffff" text-anchor="middle">FEATURED 4:3</text>
+    <text x="0" y="65" font-family="'Space Mono', monospace" font-size="20" fill="#000000" text-anchor="middle" font-weight="bold">EXHIBITION KEY VISUAL</text>
+  </g>
+
+  <!-- Poster Tag Footer -->
+  <rect x="36" y="800" width="1128" height="64" fill="#000000"/>
+  <text x="60" y="838" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">FEATURED ARTWORK CONTAINER [ ASPECT RATIO 4:3 ]</text>
+  <text x="1110" y="838" font-family="'Space Mono', monospace" font-size="14" fill="#ffcc00" text-anchor="end">REPLACE AT: /public/images/featured/featured-4x3.jpg</text>
+</svg>

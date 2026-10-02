@@ -1,0 +1,294 @@
+/* ==========================================================================
+   DESIGNER PORTFOLIO — RISOGRAPH / COMIC EDITORIAL DESIGN SYSTEM
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-red: #d32222;
+  --bg-red-accent: #e62e2e;
+  --color-black: #0c0c0c;
+  --color-offwhite: #f8f5ee;
+  --color-offwhite-dark: #eee9dc;
+  --color-yellow: #ffd000;
+  --color-gray: #4a4a4a;
+  
+  --border-thick: 3px solid #0c0c0c;
+  --border-thin: 1.5px solid #0c0c0c;
+  
+  --shadow-sm: 4px 4px 0px #0c0c0c;
+  --shadow-md: 7px 7px 0px #0c0c0c;
+  --shadow-lg: 12px 12px 0px #0c0c0c;
+  --shadow-paper: 8px 16px 30px rgba(0, 0, 0, 0.45);
+  
+  --font-display: 'Syne', 'Impact', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --transition-fast: 0.15s cubic-bezier(0.2, 0, 0, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-red);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-black);
+  background-color: var(--bg-red);
+  /* Dense fine black halftone texture over bright red canvas */
+  background-image: 
+    radial-gradient(#000000 22%, transparent 23%),
+    radial-gradient(#000000 15%, transparent 16%);
+  background-position: 0 0, 3px 3px;
+  background-size: 6px 6px;
+  background-attachment: fixed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Halftone Vignette / Grain overlay */
+.halftone-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.25);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-red);
+  border-left: var(--border-thick);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-black);
+  border: 2px solid var(--color-yellow);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-yellow);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Poster Card Containers */
+.poster-box {
+  background: var(--color-offwhite);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.poster-box-dark {
+  background: var(--color-black);
+  color: var(--color-offwhite);
+  border: 3px solid var(--color-offwhite);
+  box-shadow: 7px 7px 0px var(--color-offwhite);
+}
+
+.poster-box:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Badge Tags & Labels */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--color-yellow);
+  color: var(--color-black);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: var(--border-thin);
+  box-shadow: 2px 2px 0px #0c0c0c;
+  letter-spacing: 0.05em;
+}
+
+.tag-badge-dark {
+  background: var(--color-black);
+  color: var(--color-offwhite);
+  border: 1.5px solid var(--color-offwhite);
+}
+
+/* Tape Accent Decorator */
+.tape-accent {
+  position: absolute;
+  width: 90px;
+  height: 26px;
+  background: rgba(248, 245, 238, 0.75);
+  border: 1px dashed rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tape-top-left {
+  top: -12px;
+  left: 20px;
+  transform: rotate(-6deg);
+}
+
+.tape-top-right {
+  top: -12px;
+  right: 20px;
+  transform: rotate(5deg);
+}
+
+/* General Layout Section Container */
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 48px 16px;
+  }
+}
+
+/* Section Header Typography & Stamp */
+.section-header-stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.section-stamp-badge {
+  background: var(--color-black);
+  color: var(--color-yellow);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 2px solid var(--color-offwhite);
+  box-shadow: 4px 4px 0px #000000;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: var(--color-offwhite);
+  text-shadow: 4px 4px 0px var(--color-black);
+  letter-spacing: -0.01em;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-offwhite);
+  margin-top: 8px;
+  background: var(--color-black);
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1.5px solid var(--color-offwhite);
+}
+
+/* Button Component */
+.btn-poster {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--color-yellow);
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-poster:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+  background: #ffe033;
+}
+
+.btn-poster:active {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0px #0c0c0c;
+}
+
+.btn-poster-black {
+  background: var(--color-black);
+  color: var(--color-offwhite);
+}
+
+.btn-poster-black:hover {
+  background: #1a1a1a;
+  color: var(--color-yellow);
+}
+
+/* Lightbox Modal Backdrop */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}

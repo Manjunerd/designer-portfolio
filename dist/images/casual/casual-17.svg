@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <!-- Fine Risograph Halftone Pattern -->
+    <pattern id="dots-17" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#000000" opacity="0.35"/>
+      <circle cx="6" cy="6" r="1.2" fill="#000000" opacity="0.35"/>
+    </pattern>
+    <pattern id="grid-17" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f1faee" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="900" fill="#2b2b2b"/>
+  <rect width="600" height="900" fill="url(#dots-17)"/>
+  <rect width="600" height="900" fill="url(#grid-17)"/>
+
+  <!-- Outer Poster Border -->
+  <rect x="16" y="16" width="568" height="868" fill="none" stroke="#f1faee" stroke-width="3" opacity="0.85"/>
+  <rect x="22" y="22" width="556" height="856" fill="none" stroke="#e63946" stroke-width="1" stroke-dasharray="6,4" opacity="0.6"/>
+
+  <!-- Abstract Graphic Geometry -->
+  <g transform="translate(300, 410)">
+    <circle r="168.00000000000003" fill="none" stroke="#a8dadc" stroke-width="8" opacity="0.7"/>
+    <circle r="108" fill="#e63946" opacity="0.85"/>
+    <polygon points="-80,60 80,60 0,-90" fill="#f1faee" opacity="0.9"/>
+    <rect x="-110" y="-15" width="220" height="30" fill="#2b2b2b" rx="4" stroke="#f1faee" stroke-width="2"/>
+    <text x="0" y="6" font-family="'Space Mono', monospace" font-size="14" font-weight="bold" fill="#f1faee" text-anchor="middle" letter-spacing="3">EXP / ARTWORK #17</text>
+  </g>
+
+  <!-- Graphic Accents -->
+  <line x1="32" y1="760" x2="568" y2="760" stroke="#f1faee" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <rect x="32" y="32" width="120" height="28" fill="#e63946"/>
+  <text x="92" y="51" font-family="'Space Mono', monospace" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle">CASUAL</text>
+  
+  <text x="568" y="52" font-family="'Space Mono', monospace" font-size="12" fill="#f1faee" text-anchor="end" opacity="0.7">600:900</text>
+
+  <!-- Poster Title Block -->
+  <text x="32" y="805" font-family="'Syne', 'Impact', sans-serif" font-size="28" font-weight="900" fill="#f1faee" letter-spacing="1">GEOMETRIC MANIFESTO</text>
+  <text x="32" y="830" font-family="'Space Grotesk', sans-serif" font-size="13" fill="#a8dadc" letter-spacing="0.5">REPLACE AT: /public/images/casual/geometric-manifesto.svg</text>
+  <text x="32" y="855" font-family="'Space Mono', monospace" font-size="11" fill="#f1faee" opacity="0.6">[ EDITORIAL RISOGRAPH SERIES // 2026 ]</text>
+
+  <!-- Tape Effect -->
+  <rect x="260" y="8" width="80" height="22" fill="#ffffff" opacity="0.3" transform="rotate(-2, 300, 19)"/>
+</svg>

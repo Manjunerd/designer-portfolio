@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <!-- Fine Risograph Halftone Pattern -->
+    <pattern id="dots-3" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#000000" opacity="0.35"/>
+      <circle cx="6" cy="6" r="1.2" fill="#000000" opacity="0.35"/>
+    </pattern>
+    <pattern id="grid-3" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="850" fill="#d62828"/>
+  <rect width="600" height="850" fill="url(#dots-3)"/>
+  <rect width="600" height="850" fill="url(#grid-3)"/>
+
+  <!-- Outer Poster Border -->
+  <rect x="16" y="16" width="568" height="818" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.85"/>
+  <rect x="22" y="22" width="556" height="806" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="6,4" opacity="0.6"/>
+
+  <!-- Abstract Graphic Geometry -->
+  <g transform="translate(300, 385)">
+    <circle r="168.00000000000003" fill="none" stroke="#ffeb3b" stroke-width="8" opacity="0.7"/>
+    <circle r="108" fill="#000000" opacity="0.85"/>
+    <polygon points="-80,60 80,60 0,-90" fill="#ffffff" opacity="0.9"/>
+    <rect x="-110" y="-15" width="220" height="30" fill="#d62828" rx="4" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="6" font-family="'Space Mono', monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="3">EXP / ARTWORK #03</text>
+  </g>
+
+  <!-- Graphic Accents -->
+  <line x1="32" y1="710" x2="568" y2="710" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Header Bar -->
+  <rect x="32" y="32" width="120" height="28" fill="#000000"/>
+  <text x="92" y="51" font-family="'Space Mono', monospace" font-size="12" font-weight="bold" fill="#d62828" text-anchor="middle">CASUAL</text>
+  
+  <text x="568" y="52" font-family="'Space Mono', monospace" font-size="12" fill="#ffffff" text-anchor="end" opacity="0.7">600:850</text>
+
+  <!-- Poster Title Block -->
+  <text x="32" y="755" font-family="'Syne', 'Impact', sans-serif" font-size="28" font-weight="900" fill="#ffffff" letter-spacing="1">TOKYO HALFTONE</text>
+  <text x="32" y="780" font-family="'Space Grotesk', sans-serif" font-size="13" fill="#ffeb3b" letter-spacing="0.5">REPLACE AT: /public/images/casual/tokyo-halftone.svg</text>
+  <text x="32" y="805" font-family="'Space Mono', monospace" font-size="11" fill="#ffffff" opacity="0.6">[ EDITORIAL RISOGRAPH SERIES // 2026 ]</text>
+
+  <!-- Tape Effect -->
+  <rect x="260" y="8" width="80" height="22" fill="#ffffff" opacity="0.3" transform="rotate(-2, 300, 19)"/>
+</svg>
